@@ -1,5 +1,7 @@
 import React from 'react';
 import { useFirebase } from '../context/FirebaseContext';
+import IncomeList from '../components/Incomelist';
+import ExpenseList from '../components/Expenseslist';
 
 const Dashboard = () => {
   const { totalIncome, totalExpenses, balance } = useFirebase();
@@ -10,6 +12,10 @@ const Dashboard = () => {
       <p>Renda Total: R$ {totalIncome}</p>
       <p>Despesas Totais: R$ {totalExpenses}</p>
       <p>Saldo Restante: R$ {balance}</p>
+      <br/>
+      <br/>
+      <IncomeList/>
+      <ExpenseList/>
     </div>
   );
 };
